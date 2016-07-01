@@ -1,0 +1,178 @@
+img {
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+
+}
+
+.temp {
+	width: 40px;
+	height: 40px;
+	z-index: 99;
+	display: block;
+	position: relative;
+	bottom: 130px;
+	left: 110px;
+	color: #98f5ff;
+}
+#down1, #down2, #down3 {
+	margin-top: 20px;
+}
+
+
+
+#enclose {
+	background-color: #000000;
+}
+#bgrnd {
+	background-color: #dbdbdb;
+}
+
+#tp2 {
+	position: relative;
+	bottom: 100px;
+	background-color: #cccccc;
+	border-radius: 5px;
+	
+	margin-right: 50px
+}
+#tp {
+	background-color: #cccccc;
+	border-radius: 5px;
+	margin-top: 40px;
+	margin-right: 50px
+}
+#adj {
+	position: relative;
+	bottom: 98px;
+}
+.head {
+font-family: 'Raleway', sans-serif;
+font-weight: 600;	
+}
+
+.mtp {
+	font-family: 'Raleway', sans-serif;
+	font-weight: 500;
+}
+.humidity{
+	font-family: 'Montserrat', sans-serif;
+	text-align: center;
+	font-size: 20px;
+	color: #fff;
+	font-weight: lighter;
+	position: relative;
+	bottom: 130px;
+}
+#location {
+	font-family: 'Montserrat', sans-serif;
+	padding: 35px;
+	color: #fff;
+	background-color: #00008b;
+	text-align: center;
+	font-size: 25px;
+	position: relative;
+	bottom:40px; 
+
+}
+
+
+
+.wind__{
+	position: relative;
+	bottom: 270px;
+
+	font-family: 'Montserrat', sans-serif;
+	text-align: center;
+}
+
+.temp {
+	text-align: center;
+	font-size: 60px;
+}
+
+#description {
+	color: #fff;
+	text-transform: uppercase;
+	background-color: #778899 ;
+	padding-top: 2.5em;
+	text-align: center;
+	font-family: 'Montserrat', sans-serif;
+	padding-bottom: 2.3em;
+	
+	
+	font-size: 15px;
+}
+a {
+	text-decoration: none;
+	color: #fff;
+}
+#topic {
+	padding-top: 0.2em;
+	padding-left: 0.3em;
+	color: #d4d4d4;
+	font-size: 50px;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 600;
+}
+
+#set {
+	padding-left: 4em;
+	margin-top: 1.5em;
+
+}
+
+#top {
+	background-color: #000000;
+
+}
+
+#searchcity {
+	font-size: 20px;
+	color:#d4d4d4;
+	font-family: 'Raleway', sans-serif;
+}
+
+
+li {
+	list-style-type: none;
+
+}
+
+ul.child > li {
+
+	display: none;
+	width: 100%!important;
+	
+	
+
+}
+
+#ex {
+	padding:1em 0 0.5em 0em;
+}
+
+.sm {
+	padding-bottom: 0.5em;
+}
+ul.parent > li {
+	float: left;
+	position: relative;
+	text-align: center;
+	width: 32%;
+	
+	cursor: pointer;
+	background-color: #4d4d4d;
+	color: #eee;
+	border-right: 1px solid #eee;
+	border-left: 1px solid #eee;
+	padding:0.5em 0 0.5em 0;
+	}
+
+
+#bgcolor {
+	background-color: #000000;
+}
+
+#style {
+	padding-top: 4em;
+}

@@ -1,0 +1,29 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+li {
+	list-style-type: none;
+
+}
+
+ul.child > li {
+
+	display: none;
+	width: 100%!important;
+}
+
+ul.parent > li {
+	float: left;
+	position: relative;
+	text-align: center;
+	width: 10%;
+	margin-top: 20px;
+	cursor: pointer;
+	background-color: #747474;
+	color: #eee;
+	border-right: 1px solid #eee;
+
+}
+

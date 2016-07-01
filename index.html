@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Index</title>
+	<link rel="stylesheet" type="text/css" href="slider.css">
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+	<script type="text/javascript" src="http://malsup.github.io/min/jquery.cycle2.min.js"></script>
+	<link href='https://fonts.googleapis.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Raleway:400,300' rel='stylesheet' type='text/css'>
+	<script type="text/javascript" src="http://malsup.github.com/jquery.cycle.all.js"></script>
+	<script type="text/javascript" src="slider.js"></script>
+
+<link rel="stylesheet" type="text/css" href="slider.css">
+	<script type="text/javascript">
+		
+		$(function () {
+
+	$('#sliders').cycle({
+		fx:    'scrollHorz',
+		next:   '#next',
+		prev:    '#prev',
+		pager:  '#pager',
+		timeout:   3000,
+		speed:     800  
+
+
+
+	});
+
+	$('#play').click(function () {
+		$('#sliders').cycle('resume'); return false;
+	});
+
+
+$('#pause').click(function () {
+		$('#sliders').cycle('pause'); return false;
+	});
+
+
+
+});
+	</script>
+</head>
+<body>
+<div id="bg">
+<div>
+	<h1 id="header">Weather</h1><a id="pad" href="home.html">Click here to go to HOME page.</a>
+</div>
+<div id="hero">
+	<div id="pager"></div>
+	<div id="play">&Delta;</div>
+	<div id="pause">&asymp;</div>
+	<div id="next">&rang;</div>
+	<div id="prev">&lang;</div>
+
+	<div id="sliders">
+
+		<div class="images">
+			<img src="welcom.jpg">
+			
+		</div>
+		<div class="images">
+			<img src="weather.jpg">
+			<div class="info">
+			<h2>Weather</h2>
+			<p>Temperature, Humidity, Wind speed and lot more!</p>
+		</div>
+		</div>
+		
+
+		<div class="images">
+			<img src="cities.jpg">
+			<div class="info">
+			<h2>Popular Cities</h2>
+			<p>Know the weather of popular cities by just a Click!</p>
+		</div>
+		</div>
+		<div class="images">
+			<img src="forecast.jpg">
+			<div class="info">
+			<h2>What will Happen?</h2>
+			<p>Here's an answer. View the Forecast! </p>
+		</div>
+		</div>
+
+		
+	</div>
+</div>
+<div><p>cccdlckdlckd</p></div>
+</div>
+</body>
+</html>

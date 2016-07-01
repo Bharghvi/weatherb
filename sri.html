@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+	<link href='https://fonts.googleapis.com/css?family=Raleway:600' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="home.css">
+	<link href='https://fonts.googleapis.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
+	<script type="text/javascript" src="home.js"></script>
+	<link href='https://fonts.googleapis.com/css?family=Raleway:400,300' rel='stylesheet' type='text/css'>
+	<script type="text/javascript" src="jquery-3.0.0.min.js"></script>
+	<script type="text/javascript">
+var API= "784abc38e8e6a69dfa1f1c02fa16d7b1";		
+var temp;
+var loc;
+var icon;
+var des;
+var humidity;
+var wind;
+var direction;
+var pressure;
+var mintemp;
+
+function update(weather) {
+	temp.innerHTML=	weather.temp;
+	loc.innerHTML=	weather.loc;
+	des.innerHTML=	weather.des;
+	wind.innerHTML=	weather.wind;
+	humidity.innerHTML=	weather.humidity;
+	direction.innerHTML=weather.direction;
+	icon.src= "imgs/codes/" + weather.icon + ".png";
+	pressure.innerHTML= weather.pressure;
+	mintemp.innerHTML= weather.mintemp;
+}
+
+//function updateByName(name) {
+	var url = "http://api.openweathermap.org/data/2.5/weather?q=" + "srinagar" + "&APPID=" + API;
+
+	sendRequest(url);
+
+
+
+
+function c(k) {
+	n= Math.round(k-273.15);
+	return n;
+}
+
+function sendRequest(url) {
+	var xmlhttp = new XMLHttpRequest();
+	xmlhttp.onreadystatechange = function() {
+		if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+			var data = JSON.parse(xmlhttp.responseText);
+			var weather = {};
+			weather.icon= data.weather[0].id;
+			weather.temp= c(data.main.temp);
+			weather.loc= data.name;
+			weather.des= data.weather[0].description;
+			weather.wind= data.wind.speed;
+			weather.direction= data.wind.deg;
+			weather.humidity= data.main.humidity;
+		weather.pressure= data.main.pressure;
+			weather.mintemp= data.main.temp_min;
+			update(weather);
+		};
+	};
+	xmlhttp.open("GET", url, true);
+	xmlhttp.send(null);
+}
+
+
+
+window.onload = function () {
+	temp= document.getElementById("temperature");
+	mintemp= document.getElementById("temp_min");
+	loc= document.getElementById("location");
+	icon= document.getElementById("icon");
+	des= document.getElementById("description");
+	humidity= document.getElementById("humidity");
+	wind= document.getElementById("wind");
+	direction= document.getElementById("direction");
+//	pressure= document.getElementById("pressure");
+//	var name = prompt("Enter the City name");
+//	updateByName(agartala);
+
+}
+
+
+ $(document).ready(function () {
+     $('ul.parent > li').hover(function () {
+          $(this).css({'background-color':'#000000'}).find('ul.child > li').show(45);
+
+     }, function () { $(this).css({'background-color':'#4d4d4d'}).find('ul.child > li').hide(45);
+     });
+});
+
+     $(function () {
+          $('a').hover(function () {
+               $(this).css({'color': '#c7c7c7'});
+
+          }, function () {
+               $(this).css({'color': '#eee'}); 
+          });
+
+     });
+
+     function displayResult() {
+     	var name1 = $("#search1").val();
+
+        updateByName(name1)
+        }
+
+	</script>
+	
+	
+</head>
+<body>
+<div id="bgcolor">
+<div class="container" id="bgrnd">
+<div class="row" id="top">
+	<div class="col-md-2">
+		<h1 id="topic">Weather</h1>
+</div>
+<div class="col-md-4"><img src="logo.png"></div>
+	<div class="col-md-offset-2 col-md-4">
+	<div id="set"><p id="searchcity">Your selected City!</p>
+	
+</div>
+</div>
+</div>
+<div class="row" id="tab_panels">
+<div class="col-md-12" id="into">
+     <ul class="parent">
+     	<li><a  class="ns" href="home.html">Home</a></li>
+     	<li><a href="pcities.html">Popular Cities</a></li>
+     	
+     	<li><a href="news.html">In NEWS</a></li>
+     </ul>       
+
+
+</div>
+        
+</div>
+<div class="row">
+	<div class="col-md-offset-1 col-md-10" id="tp">
+		<h3 class="head">Get it Here!</h3>
+		<p class="mtp">Get to know the Weather viz. Temperature, Humidity, Wind Speed and Direction all at once along with Description of the Weather of any City!</p>
+	</div>
+</div>
+<div class="row" id="style">
+<div id="enclose">
+	<div class="col-md-offset-2 col-md-3" id="down1">
+		
+	<img src="temp.jpg">
+	<div class="temp"><span id="temperature">0</span>&deg;</div>
+		<div id="location">Unknown</div>
+	</div>
+	<div class="col-md-2" id="down2">
+		<img id="wicon" src="icon6.png">
+		<div><p id="description">Nothing to describe</p></div> 
+	</div>
+	</div>
+	<div class=" col-md-3 " id="down3">
+	<img src="hum.jpg">
+
+		<div class="humidity">
+		<h3>Humidity</h3>
+			
+			<span id="humidity">0</span>%
+		</div>
+		<img id="adj" src="wind1.jpg">
+		<div class="wind__">
+		<h3>Wind speed and direction</h3>
+			<span id="wind">0</span> mph <span id="direction">N</span>
+		</div>
+
+	
+</div>
+<div class="row">
+<div class="col-md-offset-1 col-md-10" id="tp2">
+
+	<h3 class="head">More in The Store!</h3>
+	<p class="mtp">Get to know about Popular Cities and What's In NEWS about weather forecast! SImply navigate to navigation bar! Also the Albums to Choose</p>
+</div></div>
+</div>
+</div>
+</div>
+</body>
+</html>
